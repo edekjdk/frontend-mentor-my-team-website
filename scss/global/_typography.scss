@@ -1,13 +1,13 @@
 @use '../global/functions' as f;
 
-.h1 {
-	&--large {
+.header {
+	&--h1-large {
 		font-weight: bold;
 		font-size: f.rem(100);
 		line-height: f.rem(100);
 		margin: 0;
 	}
-	&--small {
+	&--h1-small {
 		font-weight: bold;
 		font-size: f.rem(64);
 		line-height: f.rem(56);

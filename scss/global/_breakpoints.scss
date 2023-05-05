@@ -1,7 +1,7 @@
 @use '../global/functions' as f;
 
 $breakpoint: (
-	'medium': f.em(800),
+	'medium': f.em(768),
 	'large': f.em(1440),
 	'x-large': f.em(1800),
 );

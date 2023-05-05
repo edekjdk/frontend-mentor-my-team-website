@@ -1,0 +1,16 @@
+@use '../global/functions' as f;
+
+.contact-us-button {
+	width: 100%;
+	max-width: f.rem(180);
+	height: f.rem(50);
+	border-radius: f.rem(25);
+	font-size: f.rem(18);
+	cursor: pointer;
+
+	&--light {
+		border: f.rem(2) solid var(--white);
+		color: var(--white);
+		background-color: transparent;
+	}
+}
