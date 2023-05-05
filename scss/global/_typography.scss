@@ -1,0 +1,46 @@
+@use '../global/functions' as f;
+
+.h1 {
+	&--large {
+		font-weight: bold;
+		font-size: f.rem(100);
+		line-height: f.rem(100);
+		margin: 0;
+	}
+	&--small {
+		font-weight: bold;
+		font-size: f.rem(64);
+		line-height: f.rem(56);
+		margin: 0;
+	}
+}
+
+h2 {
+	font-weight: bold;
+	font-size: f.rem(48);
+	line-height: f.rem(48);
+	margin: 0;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: f.rem(18);
+	line-height: f.rem(28);
+	margin: 0;
+}
+
+.body {
+	&--large {
+		font-weight: 600;
+		font-size: f.rem(18);
+		line-height: f.rem(28);
+		margin: 0;
+	}
+
+	&--small {
+		font-weight: 600;
+		font-size: f.rem(15);
+		line-height: f.rem(25);
+		margin: 0;
+	}
+}
