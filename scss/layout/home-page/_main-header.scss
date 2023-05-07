@@ -1,0 +1,134 @@
+@use '../../global/functions' as f;
+@use '../../global/breakpoints' as b;
+
+.main-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	color: var(--white);
+	background-color: var(--mid-night-green);
+
+	min-height: f.rem(500);
+	position: relative;
+
+	@include b.break('large') {
+		flex-direction: row;
+		padding: 0 f.rem(160);
+		align-items: flex-start;
+		min-height: f.rem(560);
+	}
+
+	@include b.break('x-large') {
+		padding: 0 f.rem(300);
+	}
+
+	& .container {
+		width: 100%;
+		gap: f.rem(30);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@include b.break('large') {
+			flex-direction: row;
+			align-items: flex-end;
+			position: relative;
+			margin-top: f.rem(90);
+			justify-content: space-between;
+		}
+	}
+
+	&__heading {
+		text-align: center;
+		max-width: f.rem(260);
+		margin-top: f.rem(30);
+
+		@include b.break('medium') {
+			margin-top: f.rem(60);
+		}
+
+		@include b.break('large') {
+			display: none;
+		}
+
+		&-talent {
+			color: var(--light-coral);
+		}
+	}
+
+	&__image {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		max-width: f.rem(500);
+
+		@include b.break('medium') {
+			max-width: f.rem(400);
+		}
+
+		@include b.break('large') {
+			right: f.rem(160);
+			max-width: f.rem(340);
+		}
+
+		@include b.break('x-large') {
+			right: f.rem(300);
+		}
+	}
+
+	&__image-desktop {
+		display: none;
+		height: f.rem(200);
+		@include b.break('large') {
+			display: block;
+			position: absolute;
+			left: f.rem(-260);
+			top: 0;
+		}
+
+		@include b.break('x-large') {
+			left: f.rem(-400);
+		}
+	}
+
+	&__text {
+		max-width: f.rem(410);
+		text-align: center;
+		padding: f.rem(10);
+		position: relative;
+		@include b.break('medium') {
+			max-width: f.rem(580);
+		}
+
+		@include b.break('large') {
+			padding: 0;
+			max-width: f.rem(410);
+			text-align: left;
+		}
+
+		&-line {
+			position: absolute;
+			min-width: f.rem(45);
+			min-height: f.rem(4);
+			background-color: var(--rapture-blue);
+			top: 0;
+			right: f.rem(365);
+			display: none;
+
+			@include b.break('large') {
+				display: block;
+			}
+		}
+	}
+}
+
+.header--h1-large {
+	display: none;
+
+	@include b.break('large') {
+		display: block;
+		max-width: f.rem(600);
+	}
+}

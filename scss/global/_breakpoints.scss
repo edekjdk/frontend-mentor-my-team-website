@@ -3,7 +3,7 @@
 $breakpoint: (
 	'medium': f.em(768),
 	'large': f.em(1440),
-	'x-large': f.em(1800),
+	'x-large': f.em(1700),
 );
 
 @mixin break($size) {
