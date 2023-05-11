@@ -3,8 +3,79 @@
 
 .opinions-page {
 	background-color: var(--deep-jungle-green);
+	height: calc(100% + 200px);
+	padding: f.rem(100) f.rem(30) f.rem(100);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	&__heading {
 		font-size: f.rem(35);
+		text-align: center;
+		color: var(--white);
+		max-width: f.rem(350);
+		line-height: 1;
+		margin: f.rem(80) auto;
+
+		&-span {
+			color: var(--rapture-blue);
+		}
+	}
+
+	&__image1 {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&__image2 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__opinions-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: f.rem(80);
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: f.rem(5);
+			color: var(--white);
+			text-align: center;
+			position: relative;
+
+			&-quotes {
+				position: absolute;
+				top: f.rem(-30);
+				z-index: 0;
+			}
+
+			& .body {
+				z-index: 1;
+				max-width: f.rem(400);
+			}
+
+			&-name {
+				color: var(--rapture-blue);
+				margin-top: f.rem(15);
+			}
+
+			&-position {
+				font-style: italic;
+			}
+
+			&-profile-picture {
+				width: f.rem(85);
+				border-radius: 50%;
+				border: f.rem(3) solid var(--rapture-blue);
+				margin-top: f.rem(10);
+			}
+		}
 	}
 }
