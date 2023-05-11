@@ -10,6 +10,10 @@
 	flex-direction: column;
 	justify-content: center;
 
+	@include b.break('large') {
+		padding: f.rem(160);
+	}
+
 	&__heading {
 		font-size: f.rem(35);
 		text-align: center;
@@ -20,6 +24,10 @@
 
 		@include b.break('medium') {
 			max-width: f.rem(500);
+		}
+
+		@include b.break('large') {
+			margin-top: 0;
 		}
 
 		&-span {
@@ -44,6 +52,10 @@
 		flex-direction: column;
 		align-items: center;
 		gap: f.rem(80);
+
+		@include b.break('large') {
+			flex-direction: row;
+		}
 
 		&-item {
 			display: flex;
