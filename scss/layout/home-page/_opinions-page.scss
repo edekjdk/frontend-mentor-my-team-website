@@ -18,6 +18,10 @@
 		line-height: 1;
 		margin: f.rem(80) auto;
 
+		@include b.break('medium') {
+			max-width: f.rem(500);
+		}
+
 		&-span {
 			color: var(--rapture-blue);
 		}
@@ -59,6 +63,10 @@
 			& .body {
 				z-index: 1;
 				max-width: f.rem(400);
+
+				@include b.break('medium') {
+					max-width: f.rem(550);
+				}
 			}
 
 			&-name {
