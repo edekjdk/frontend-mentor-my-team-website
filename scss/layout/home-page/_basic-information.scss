@@ -77,7 +77,7 @@
 	&__image {
 		position: absolute;
 		top: 0;
-		right: f.rem(-100);
+		right: 0;
 
 		@include b.break('large') {
 			top: f.rem(470);

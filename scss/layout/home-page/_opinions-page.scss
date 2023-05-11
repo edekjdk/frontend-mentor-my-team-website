@@ -1,0 +1,10 @@
+@use '../../global/breakpoints' as b;
+@use '../../global/functions' as f;
+
+.opinions-page {
+	background-color: var(--deep-jungle-green);
+
+	&__heading {
+		font-size: f.rem(35);
+	}
+}

@@ -113,7 +113,7 @@
 	&__mobile-image {
 		position: absolute;
 		bottom: 0;
-		right: f.rem(-100);
+		right: 0;
 
 		@include b.break('medium') {
 			display: none;

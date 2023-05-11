@@ -34,7 +34,7 @@
 		@include b.break('large') {
 			flex-direction: row;
 			align-items: flex-end;
-			position: relative;
+			// position: relative;
 			margin-top: f.rem(90);
 			justify-content: space-between;
 		}
@@ -84,12 +84,12 @@
 		@include b.break('large') {
 			display: block;
 			position: absolute;
-			left: f.rem(-260);
-			top: 0;
+			left: 0;
+			top: f.rem(90);
 		}
 
 		@include b.break('x-large') {
-			left: f.rem(-400);
+			left: 0;
 		}
 	}
 
