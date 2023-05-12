@@ -28,6 +28,8 @@
 
 		@include b.break('large') {
 			margin-top: 0;
+			max-width: f.rem(1000);
+			font-size: f.rem(54);
 		}
 
 		&-span {

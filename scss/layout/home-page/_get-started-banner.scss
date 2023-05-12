@@ -14,6 +14,11 @@
 	@include b.break('medium') {
 		flex-direction: row;
 		gap: f.rem(60);
+		height: f.rem(250);
+	}
+
+	@include b.break('large') {
+		justify-content: space-evenly;
 	}
 
 	&__heading {
@@ -25,12 +30,22 @@
 
 		@include b.break('medium') {
 			max-width: unset;
+			font-size: f.rem(35);
+		}
+
+		@include b.break('large') {
+			font-size: f.rem(54);
 		}
 	}
 
 	& .contact-us-button {
 		border: f.rem(2) solid var(--sacramento-state-green);
 		color: var(--sacramento-state-green);
+
+		&:hover {
+			background-color: var(--sacramento-state-green);
+			color: var(--white);
+		}
 	}
 
 	&__image {
