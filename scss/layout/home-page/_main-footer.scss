@@ -1,0 +1,102 @@
+@use '../../global/breakpoints' as b;
+@use '../../global/functions' as f;
+
+.main-footer {
+	background-color: var(--dark-green);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: f.rem(50) f.rem(30);
+
+	@include b.break('large') {
+		padding: f.rem(50) f.rem(160);
+	}
+
+	@include b.break('x-large') {
+		padding: f.rem(50) f.rem(300);
+	}
+
+	&__container1 {
+		width: 100%;
+
+		@include b.break('medium') {
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: f.rem(40);
+			gap: f.rem(100);
+		}
+
+		@include b.break('large') {
+			justify-content: space-between;
+		}
+	}
+
+	&__container2 {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include b.break('medium') {
+			display: flex;
+			justify-content: space-around;
+			flex-direction: row;
+		}
+
+		@include b.break('large') {
+			justify-content: space-between;
+		}
+	}
+
+	&__logo {
+		width: f.rem(130);
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: f.rem(30);
+
+		@include b.break('medium') {
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		gap: f.rem(20);
+	}
+
+	&__company-information {
+		text-align: center;
+		margin: f.rem(25) 0;
+
+		@include b.break('medium') {
+			margin: 0;
+			text-align: right;
+		}
+
+		&-item {
+			margin: f.rem(5) 0;
+			color: var(--footer-text);
+		}
+	}
+
+	&__socials-container {
+		display: flex;
+		align-items: flex-end;
+		gap: f.rem(20);
+		margin: f.rem(20) 0;
+	}
+
+	&__copyright {
+		margin: f.rem(30) 0 f.rem(0);
+		color: var(--footer-text);
+
+		@include b.break('medium') {
+			margin: 0;
+		}
+	}
+}
