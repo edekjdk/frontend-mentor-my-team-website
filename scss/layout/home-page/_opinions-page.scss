@@ -12,6 +12,7 @@
 
 	@include b.break('large') {
 		padding: f.rem(160);
+		height: 90vh;
 	}
 
 	@include b.break('x-large') {
