@@ -67,6 +67,13 @@
 	&__navigation {
 		display: flex;
 		gap: f.rem(20);
+
+		&-item {
+			transition: color 0.3s;
+			&:hover {
+				color: var(--light-coral);
+			}
+		}
 	}
 
 	&__company-information {
@@ -89,6 +96,15 @@
 		align-items: flex-end;
 		gap: f.rem(20);
 		margin: f.rem(20) 0;
+
+		&-item {
+			color: white;
+			transition: color 0.3s;
+			&:hover {
+				color: var(--light-coral);
+				cursor: pointer;
+			}
+		}
 	}
 
 	&__copyright {
