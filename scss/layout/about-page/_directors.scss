@@ -7,27 +7,47 @@
 	flex-direction: column;
 	align-items: center;
 	background-color: var(--deep-jungle-green);
+	padding-bottom: f.rem(160);
+
 	&__image1 {
 		position: absolute;
 		top: -100px;
 		left: 0;
 		clip-path: inset(50% 0 0 0);
+
+		@include b.break('large') {
+			clip-path: none;
+			top: 0;
+		}
+	}
+
+	&__image2 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
 	}
 
 	&__heading {
 		font-size: f.rem(30);
 		margin: f.rem(100) 0 f.rem(40);
 		color: var(--white);
+
+		@include b.break('large') {
+			font-size: f.rem(54);
+			margin: f.rem(100) 0 f.rem(70);
+		}
 	}
 
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
+		row-gap: f.rem(50);
 
 		@include b.break('medium') {
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: auto;
+			column-gap: f.rem(50);
 		}
 
 		@include b.break('large') {
@@ -36,10 +56,111 @@
 		}
 
 		&-item {
-			min-height: f.rem(300);
-			min-width: f.rem(300);
-			background-color: #fff;
+			height: f.rem(300);
+			min-width: f.rem(320);
+			// background-color: #fff;
 			margin: f.rem(10);
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&-name {
+				color: var(--rapture-blue);
+			}
+
+			&-description {
+				color: var(--white);
+				font-style: italic;
+			}
+
+			&-disabled {
+				width: 100%;
+				height: 100%;
+				background-color: var(--sacramento-state-green);
+				z-index: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: f.rem(10);
+			}
+
+			&-enabled {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				top: 0;
+				left: 0;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: var(--sacramento-state-green);
+				z-index: 1;
+				gap: f.rem(25);
+				// opacity: 0;
+				&-name {
+					color: var(--rapture-blue);
+				}
+
+				&-links {
+					margin-top: f.rem(20);
+					display: flex;
+					gap: f.rem(10);
+				}
+
+				&-description {
+					max-width: f.rem(300);
+					text-align: center;
+					color: var(--white);
+				}
+			}
+
+			&-image {
+				width: f.rem(120);
+				border-radius: 50%;
+				border: f.rem(3) solid var(--rapture-blue);
+			}
+
+			&-button {
+				min-width: f.rem(70);
+				min-height: f.rem(70);
+				position: absolute;
+				bottom: f.rem(-35);
+				border-radius: 50%;
+				border: none;
+				cursor: pointer;
+				background-color: var(--light-coral);
+				// position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 1;
+				transition: ease-in-out 0.3s;
+
+				&:hover {
+					background-color: var(--rapture-blue);
+				}
+
+				&-line1 {
+					min-height: f.rem(5);
+					width: f.rem(22);
+					background-color: var(--sacramento-state-green);
+					margin: 0 auto;
+					position: absolute;
+				}
+
+				&-line2 {
+					min-height: f.rem(22);
+					width: f.rem(5);
+					background-color: var(--sacramento-state-green);
+					margin: 0 auto;
+					position: absolute;
+					// top: 0;
+				}
+			}
 		}
 	}
 }
