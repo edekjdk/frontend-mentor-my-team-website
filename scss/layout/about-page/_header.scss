@@ -74,9 +74,11 @@
 		position: absolute;
 		bottom: f.rem(-100);
 		right: 0;
+		clip-path: inset(0 0 50% 0);
 
 		@include b.break('medium') {
 			bottom: 0;
+			clip-path: none;
 		}
 	}
 }
