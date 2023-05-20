@@ -66,6 +66,10 @@
 			align-items: center;
 			justify-content: center;
 
+			@include b.break('large') {
+				width: f.rem(400);
+			}
+
 			&-name {
 				color: var(--rapture-blue);
 			}
@@ -100,7 +104,13 @@
 				background-color: var(--sacramento-state-green);
 				z-index: 1;
 				gap: f.rem(25);
-				// opacity: 0;
+				opacity: 0;
+				transition: ease-in-out 0.3s;
+
+				&--active {
+					opacity: 100;
+				}
+
 				&-name {
 					color: var(--rapture-blue);
 				}
@@ -139,6 +149,16 @@
 				justify-content: center;
 				z-index: 1;
 				transition: ease-in-out 0.3s;
+				// background: transparent;
+
+				&--active {
+					background-color: var(--rapture-blue);
+					transform: rotate(45deg);
+
+					&:hover {
+						background-color: var(--light-coral);
+					}
+				}
 
 				&:hover {
 					background-color: var(--rapture-blue);
