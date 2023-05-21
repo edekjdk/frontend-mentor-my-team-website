@@ -28,14 +28,8 @@ const toggleDescription = (e) => {
 	// console.log(e.target);
 	let test = e.target.closest('div');
 	let test2 = test.children[1];
-	console.log(test);
-	// console.log(e.target.closest('div'));
-	// console.log(test.children[0]);
-	console.log();
-	// test2.classList.toggle('directors__container-item-enabled--active');
-	// e.target
-	// .closest('button')
-	// .classList.toggle('directors__container-item-button--active');
+	test2.classList.toggle('directors__container-item-enabled--active');
+	e.target.classList.toggle('directors__container-item-button--active');
 };
 
 // console.log(burgerButton.children);

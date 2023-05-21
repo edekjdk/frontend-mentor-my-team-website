@@ -170,6 +170,7 @@
 					background-color: var(--sacramento-state-green);
 					margin: 0 auto;
 					position: absolute;
+					pointer-events: none;
 				}
 
 				&-line2 {
@@ -179,6 +180,7 @@
 					margin: 0 auto;
 					position: absolute;
 					// top: 0;
+					pointer-events: none;
 				}
 			}
 		}
