@@ -32,6 +32,10 @@
 		margin: f.rem(100) 0 f.rem(40);
 		color: var(--white);
 
+		@include b.break('medium') {
+			font-size: f.rem(45);
+		}
+
 		@include b.break('large') {
 			font-size: f.rem(54);
 			margin: f.rem(100) 0 f.rem(70);

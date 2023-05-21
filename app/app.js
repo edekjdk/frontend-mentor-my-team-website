@@ -30,6 +30,7 @@ const toggleDescription = (e) => {
 	let test2 = test.children[1];
 	test2.classList.toggle('directors__container-item-enabled--active');
 	e.target.classList.toggle('directors__container-item-button--active');
+	// console.log(e.target.closest('.directors__container-item-enabled'));
 };
 
 // console.log(burgerButton.children);
