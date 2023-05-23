@@ -9,9 +9,19 @@
 	padding: f.rem(40) f.rem(30) f.rem(80);
 	background-color: var(--mid-night-green);
 
+	@include b.break('large') {
+		width: 50vw;
+		height: 75vh;
+		justify-content: center;
+	}
+
 	&__main-heading {
 		font-size: f.rem(48);
 		color: var(--white);
+
+		@include b.break('large') {
+			font-size: f.rem(54);
+		}
 	}
 
 	&__sub-heading {
@@ -29,6 +39,10 @@
 			// top: 0;
 			left: f.rem(-100);
 			clip-path: inset(0 0 0 50%);
+		}
+
+		@include b.break('large') {
+			top: f.rem(290);
 		}
 	}
 

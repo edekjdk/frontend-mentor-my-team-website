@@ -1,0 +1,87 @@
+@use '../../global/breakpoints' as b;
+@use '../../global/functions' as f;
+
+.contact-form {
+	display: flex;
+	justify-content: center;
+	padding: 0 f.rem(60) f.rem(150);
+	position: relative;
+	background-color: var(--mid-night-green);
+
+	@include b.break('large') {
+		width: 50vw;
+		padding: f.rem(100) f.rem(180) f.rem(150) f.rem(60);
+	}
+
+	@include b.break('x-large') {
+		padding: f.rem(100) f.rem(330) f.rem(150) f.rem(60);
+	}
+
+	&__button {
+		align-self: flex-start;
+		border: none;
+		width: f.rem(100);
+		height: f.rem(40);
+		border-radius: f.rem(25);
+		font-size: f.rem(15);
+		margin-top: f.rem(20);
+		cursor: pointer;
+		transition: ease-in-out 0.3s;
+
+		&:hover {
+			background-color: var(--dark-green);
+			color: var(--white);
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: f.rem(20);
+		// max-width: f.rem(300);
+		width: 100%;
+
+		@include b.break('medium') {
+			max-width: f.rem(600);
+		}
+
+		&-item {
+			width: 100%;
+			height: f.rem(50);
+			// max-width: f.rem(300);
+			width: 100%;
+			border: none;
+			border-bottom: f.rem(2) solid var(--footer-text);
+			font-family: inherit;
+			color: var(--footer-text);
+			background: transparent;
+			outline: none;
+
+			@include b.break('medium') {
+				max-width: f.rem(600);
+			}
+
+			&::placeholder {
+				color: var(--footer-text);
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		clip-path: inset(0 50% 50% 0);
+		bottom: 0;
+		right: f.rem(-103);
+
+		@include b.break('medium') {
+			clip-path: inset(0 50% 0 0);
+		}
+	}
+}
+.contact-container {
+	@include b.break('large') {
+		display: flex;
+	}
+}
