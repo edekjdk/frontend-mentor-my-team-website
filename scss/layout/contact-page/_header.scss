@@ -1,0 +1,49 @@
+@use '../../global/breakpoints' as b;
+@use '../../global/functions' as f;
+
+.contact-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: f.rem(20);
+	padding: f.rem(40) f.rem(30) f.rem(80);
+	background-color: var(--mid-night-green);
+
+	&__main-heading {
+		font-size: f.rem(48);
+		color: var(--white);
+	}
+
+	&__sub-heading {
+		font-size: f.rem(40);
+		color: var(--light-coral);
+		margin-bottom: f.rem(20);
+	}
+
+	&__image {
+		display: none;
+
+		@include b.break('medium') {
+			display: block;
+			position: absolute;
+			// top: 0;
+			left: f.rem(-100);
+			clip-path: inset(0 0 0 50%);
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: f.rem(15);
+		&-item {
+			display: flex;
+			gap: f.rem(10);
+			align-items: center;
+
+			&-heading {
+				color: var(--white);
+			}
+		}
+	}
+}
