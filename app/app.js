@@ -2,6 +2,8 @@ const burgerButton = document.querySelector('.main-nav__burger-button');
 const mobileMenu = document.querySelector('.main-nav__links-container');
 const shadow = document.querySelector('.main-nav__mobile-shadow');
 const aboutPageHeaderText = document.querySelector('.main-header__text');
+const submitBtn = document.querySelector('.contact-form__button');
+const input = document.querySelectorAll('.contact-form__form-item');
 const toggleButton = document.querySelectorAll(
 	'.directors__container-item-button'
 );
@@ -33,9 +35,30 @@ const toggleDescription = (e) => {
 	// console.log(e.target.closest('.directors__container-item-enabled'));
 };
 
+const checkForm = () => {
+	input.forEach((input) => {
+		const test = input.parentElement;
+		const err = test.querySelector('.error');
+		if (input.value == '') {
+			// console.log('this field is required');
+			err.innerHTML = 'this field is required';
+			input.classList.add('contact-form__form-item--error');
+			console.log(err);
+			// input.closest('p').innerText = 'this field is required';
+		} else {
+			err.innerHTML = '';
+			input.classList.remove('contact-form__form-item--error');
+		}
+	});
+};
+
 // console.log(burgerButton.children);
 
 toggleButton.forEach((button) =>
 	button.addEventListener('click', toggleDescription)
 );
 burgerButton.addEventListener('click', toggleMobileMenu);
+submitBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+	checkForm();
+});

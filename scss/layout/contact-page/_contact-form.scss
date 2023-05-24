@@ -66,6 +66,13 @@
 			&::placeholder {
 				color: var(--footer-text);
 			}
+			&--error {
+				border-bottom: f.rem(2) solid var(--light-coral);
+
+				&::placeholder {
+					color: var(--light-coral);
+				}
+			}
 		}
 	}
 
@@ -84,4 +91,12 @@
 	@include b.break('large') {
 		display: flex;
 	}
+}
+.test {
+	width: 100%;
+}
+.error {
+	color: var(--light-coral);
+	font-size: f.rem(15);
+	font-style: italic;
 }
